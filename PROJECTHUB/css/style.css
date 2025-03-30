@@ -1,0 +1,86 @@
+/* Student Attendance Management System - Main Stylesheet */
+
+/* Fix for Remix Icon display issue */
+[class^="ri-"]::before, [class*=" ri-"]::before {
+    display: inline-block;
+    font-family: 'remixicon' !important;
+}
+
+/* Chart container responsive styles */
+.chart-container {
+    width: 100%;
+    height: 200px;
+    transition: all 0.3s ease;
+}
+
+/* Status colors */
+.status-present {
+    color: #10B981;
+}
+
+.status-absent {
+    color: #EF4444;
+}
+
+.status-late {
+    color: #F59E0B;
+}
+
+/* Hover effects for buttons */
+button:hover {
+    opacity: 0.9;
+}
+
+/* Transition effects */
+.nav-btn, .status-btn, .attendance-status-btn {
+    transition: all 0.2s ease;
+}
+
+/* Active navigation button */
+.nav-btn.active {
+    color: #4F46E5;
+}
+
+/* Student list item hover effect */
+#studentList > div:hover,
+#attendanceStudentList > div:hover {
+    background-color: #f9fafb;
+}
+
+/* Dark mode specific fixes */
+body.dark #studentList > div:hover,
+body.dark #attendanceStudentList > div:hover {
+    background-color: #1f2937;
+}
+
+body.dark .bg-gray-50 {
+    background-color: #111827;
+}
+
+body.dark .border {
+    border-color: #374151;
+}
+
+/* Fix for icon display in dark mode */
+body.dark [class^="ri-"]::before, 
+body.dark [class*=" ri-"]::before {
+    color: #d1d5db;
+}
+
+/* Animation for status changes */
+.status-btn i,
+.attendance-status-btn {
+    transition: all 0.3s ease;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 640px) {
+    .grid-cols-3 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+    
+    .chart-container {
+        height: 150px;
+    }
+}
