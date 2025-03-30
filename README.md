@@ -1,2 +1,3 @@
 # FRONT-END
-FRONT-END UI
+
+City Scholar Management, UI app
